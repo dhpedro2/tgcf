@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heaven Official's Blessing - Biazinha</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    #episodios {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+    }
+    #video {
+      width: 640px;
+      height: 480px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Heaven Official's Blessing</h1>
+  <p>Selecione o episódio:</p>
+  <select id="episodios">
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/01_720p_dcbf2107.mp4">Episódio 1</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/02_720p_cdfff268.mp4">Episódio 2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/03_1080p_eef32ba8.mp4">Episódio 3</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/04_1080p_95bc1399.mp4">Episódio 4</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/05_1080p_ce7b5241.mp4">Episódio 5</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/06_1080p_607d62e0.mp4">Episódio 6</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/07_1080p_46802dee.mp4">Episódio 7</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/08_1080p_dbea90c2.mp4">Episódio 8</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/09_1080p_56ed5339.mp4">Episódio 9</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/10_1080p_7e0ef9b6.mp4">Episódio 10</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/11_1080p_b7f9e234.mp4">Episódio 11</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season1/12_1080p_f681a49b.mp4">Episódio 12 - ESPECIAL</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/01_1080p_71d53ece.mp4">Episódio 1 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/02_1080p_500a0c38.mp4">Episódio 2 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/03_1080p_d137ec9c.mp4">Episódio 3 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/04_1080p_f0aa2017.mp4">Episódio 4 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/05_1080p_dd7d40dc.mp4">Episódio 5 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/06_1080p_99aff0f8.mp4">Episódio 6 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/07_1080p_07511011.mp4">Episódio 7 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/08_1080p_0807d11a.mp4">Episódio 8 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/09_1080p_3e3fb05d.mp4">Episódio 9 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/10_1080p_75b77f03.mp4">Episódio 10 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/11_1080p_8de79fa1.mp4">Episódio 11 - T2</option>
+    <option value="https://cdn.dnskcdn.link/heaven-officials-blessing/season2/12_1080p_1e694aed.mp4">Episódio 12 - T2</option>
+  </select>
+  <video id="video" controls></video>
+  <script>
+    const episodios = document.getElementById('episodios');
+    const video = document.getElementById('video');
+
+    episodios.addEventListener('change', function() {
+      const episodioSelecionado = episodios.value;
+      const urlVideo = `${episodioSelecionado}`;
+      video.src = urlVideo;
+    });
+
+    // Define o episódio 1 como padrão
+    video.src = 'https://cdn.dnskcdn.link/heaven-officials-blessing/season1/01_720p_dcbf2107.mp4';
+  </script>
+</body>
+</html>
